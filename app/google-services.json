@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "427555505558",
+    "project_id": "i-m-here-8d372",
+    "storage_bucket": "i-m-here-8d372.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427555505558:android:26d2eac23ba310cfe089b7",
+        "android_client_info": {
+          "package_name": "com.example.iamhere"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427555505558-i0i4u7pe58n0glgsj9im182897f30uf2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfZKtTst0l4Yjb-UiXvSMDIVks-K_XagM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427555505558-i0i4u7pe58n0glgsj9im182897f30uf2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427555505558:android:dbe88eaeef1e0ba8e089b7",
+        "android_client_info": {
+          "package_name": "com.nakib.iamhere"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427555505558-i0i4u7pe58n0glgsj9im182897f30uf2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfZKtTst0l4Yjb-UiXvSMDIVks-K_XagM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427555505558-i0i4u7pe58n0glgsj9im182897f30uf2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

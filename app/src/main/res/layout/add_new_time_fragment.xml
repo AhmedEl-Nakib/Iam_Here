@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.iamhere.ui.addNewTime.AddNewTimeViewModel" />
+            type="com.nakib.iamhere.ui.addNewTime.AddNewTimeViewModel" />
         <import type="android.view.View"/>
     </data>
 
@@ -85,14 +85,15 @@
             android:id="@+id/startHourTxtId"
             android:layout_width="0dp"
             android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
             android:gravity="center_vertical"
             android:paddingStart="16dp"
-            android:background="@drawable/rounded_corner"
-            android:layout_marginTop="16dp"
             android:text="Start time"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+            app:layout_constraintEnd_toEndOf="@+id/dayTxtId"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dayTxtId"
+            app:layout_constraintTop_toBottomOf="@+id/dayTxtId" />
 
         <TextView
             android:id="@+id/endHourTxtId"
@@ -116,9 +117,9 @@
             android:gravity="center_vertical"
             android:paddingStart="16dp"
             android:text="Date"
-            app:layout_constraintEnd_toEndOf="@+id/endHourTxtId"
-            app:layout_constraintStart_toStartOf="@+id/endHourTxtId"
-            app:layout_constraintTop_toBottomOf="@+id/endHourTxtId" />
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
         <Button
             android:id="@+id/addAppointmentBtnId"
@@ -128,7 +129,7 @@
             android:text="Add New"
             app:layout_constraintEnd_toEndOf="@+id/dayTxtId"
             app:layout_constraintStart_toStartOf="@+id/dayTxtId"
-            app:layout_constraintTop_toBottomOf="@+id/dayTxtId" />
+            app:layout_constraintTop_toBottomOf="@+id/endHourTxtId" />
 
         <ProgressBar
             android:id="@+id/progressId"

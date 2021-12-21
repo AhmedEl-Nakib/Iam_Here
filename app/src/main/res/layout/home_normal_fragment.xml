@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.iamhere.ui.homeNormal.HomeNormalViewModel" />
+            type="com.nakib.iamhere.ui.homeNormal.HomeNormalViewModel" />
         <import type="android.view.View"/>
     </data>
 
@@ -66,11 +66,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="Today's Attendance"
+            android:textAllCaps="false"
             android:backgroundTint="#193C5D"
-            android:text="Click here to submit your attendance today (Click once every day)"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addNewBtnId" />
+<!--        android:text="Click here to submit your attendance today (Click once every day)"-->
 
         <TextView
             android:id="@+id/textView2"
@@ -110,7 +112,7 @@
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="50dp"
             android:background="#255E94"
             android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
@@ -126,6 +128,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
+            tools:listitem="@layout/normal_table_item"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -142,6 +145,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tableId" />
+
+        <TextView
+            android:id="@+id/learnMoreId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn more !"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintBottom_toBottomOf="@+id/allowLocationBtnId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/allowLocationBtnId"
+            app:layout_constraintTop_toTopOf="@+id/allowLocationBtnId" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

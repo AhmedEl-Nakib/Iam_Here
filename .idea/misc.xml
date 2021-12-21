@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_appointment_icon.xml" value="0.23854166666666668" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.22407407407407406" />
         <entry key="app/src/main/res/drawable/ic_dot.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/drawable/ic_location_icon.xml" value="0.23854166666666668" />
@@ -12,10 +13,13 @@
         <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/drawable/sample_icon.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.225" />
-        <entry key="app/src/main/res/layout/add_new_time_fragment.xml" value="0.27999999999999997" />
+        <entry key="app/src/main/res/layout/add_new_time_fragment.xml" value="0.24" />
+        <entry key="app/src/main/res/layout/admin_doctors_item.xml" value="0.27999999999999997" />
         <entry key="app/src/main/res/layout/doctor_location_fragment.xml" value="0.225" />
-        <entry key="app/src/main/res/layout/home_normal_fragment.xml" value="0.24" />
-        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.24" />
+        <entry key="app/src/main/res/layout/fragment_admin.xml" value="0.22666666666666668" />
+        <entry key="app/src/main/res/layout/fragment_privacy_policy.xml" value="0.20555555555555555" />
+        <entry key="app/src/main/res/layout/home_normal_fragment.xml" value="0.21333333333333335" />
+        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.21333333333333335" />
         <entry key="app/src/main/res/layout/normal_table_item.xml" value="0.225" />
         <entry key="app/src/main/res/layout/spinner_item.xml" value="0.225" />
         <entry key="app/src/main/res/layout/splash_fragment.xml" value="0.225" />

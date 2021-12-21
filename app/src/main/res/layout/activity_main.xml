@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.iamhere.MainActivityViewModel" />
+            type="com.nakib.iamhere.MainActivityViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
