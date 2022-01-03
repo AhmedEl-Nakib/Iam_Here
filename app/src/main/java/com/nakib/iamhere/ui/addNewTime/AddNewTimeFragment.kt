@@ -46,6 +46,9 @@ class AddNewTimeFragment : Fragment() {
         binding.addAppointmentBtnId.setOnClickListener {
             viewModel.addReservation(requireContext(),requireArguments().getString("UserId")!!)
         }
+        binding.arrowBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
     }
 
     private fun handleObserver() {

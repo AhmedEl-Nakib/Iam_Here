@@ -24,6 +24,7 @@
         <entry key="app/src/main/res/layout/spinner_item.xml" value="0.225" />
         <entry key="app/src/main/res/layout/splash_fragment.xml" value="0.225" />
         <entry key="app/src/main/res/layout/time_table_normal_fragment.xml" value="0.225" />
+        <entry key="app/src/main/res/menu/home_menu.xml" value="0.225" />
       </map>
     </option>
   </component>

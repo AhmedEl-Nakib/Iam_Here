@@ -29,8 +29,12 @@ import java.util.*
 import java.util.concurrent.TimeUnit
 import android.os.CountDownTimer
 import android.provider.Settings
+import android.view.Menu
+import android.view.MenuInflater
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -42,6 +46,8 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: MainActivityViewModel by inject()
 
     var userId : String = ""
+    lateinit var navController : NavController
+    lateinit var navHostFragment : NavHostFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -183,10 +189,8 @@ class MainActivity : AppCompatActivity() {
                 ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),1)
             }
         }
+
     }
-
-
-
 
     private fun startServiceOfLocation() {
 //        GPSService.LocationInterval = 60000
@@ -210,8 +214,6 @@ class MainActivity : AppCompatActivity() {
         LocalBroadcastManager.getInstance(this)
             .registerReceiver(mMessageReceiver, IntentFilter("com.highbryds.tracker"))
     }
-
-
 
     companion object {
         private lateinit var mApplication: MainActivity
@@ -298,4 +300,20 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        navHostFragment = supportFragmentManager.findFragmentById(R.id.navGraphHome) as NavHostFragment
+//        navController = navHostFragment.navController
+//
+//        val inflater: MenuInflater = menuInflater
+//        inflater.inflate(R.menu.home_menu, menu)
+//        navController.addOnDestinationChangedListener { _, destination, _ ->
+//            if(destination.id == R.id.splashFragment ||destination.id == R.id.privacyPolicyFragment ||destination.id == R.id.loginFragment ) {
+//
+//            } else{
+//
+//            }
+//        }
+//        return true
+//    }
 }

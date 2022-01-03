@@ -24,7 +24,7 @@ class AdminViewModel(private val serviceGeneral: AppRequests) : ViewModel()  {
 
             loader.value = true
             CoroutineScope(Dispatchers.IO).async {
-                runCatching { serviceGeneral.getHomeAdmin(CommonUtils.getCurrentDate()) }
+                runCatching { serviceGeneral.getHomeAdmin(date.value!!) }
                     .onSuccess {
                         withContext(Dispatchers.Main) {
                             try {

@@ -3,6 +3,7 @@ package com.nakib.iamhere.networking
 import com.nakib.iamhere.model.addAtendanceLocation.AddAtendanceLocationResponseModel
 import com.nakib.iamhere.model.addReservation.AddReservationResponseModel
 import com.nakib.iamhere.model.admin.AdminDoctorResponseModel
+import com.nakib.iamhere.model.doctorLocation.DoctorLocationResponseModel
 import com.nakib.iamhere.model.home.DeleteRecordResponseModel
 import com.nakib.iamhere.model.home.NormalHomeResponseModel
 import com.nakib.iamhere.model.login.LoginResponseModel
@@ -54,7 +55,11 @@ interface AppRequests {
     @GET("Reservation.php?action=delete")
     suspend fun deleteRecord(@Query("userId") userId:String , @Query("recordId") recordId:String) :Response<List<DeleteRecordResponseModel>>
 
-    @GET("Attendance.php?action=GetUsersDayAttendance")
-    suspend fun getHomeAdmin(@Query("day_date") day_date:String ) :Response<List<AdminDoctorResponseModel>>
+    @FormUrlEncoded
+    @POST("Attendance.php?action=GetUsersDayAttendance")
+    suspend fun getHomeAdmin(@Field("day_date") day_date:String ) :Response<List<AdminDoctorResponseModel>>
 
+    @FormUrlEncoded
+    @POST("Attendance.php?action=GetOneUserDayAttendance")
+    suspend fun getDoctorLocations(@Field("userId") userId:String ,@Field("day_date") day_date:String) : Response<List<DoctorLocationResponseModel>>
 }

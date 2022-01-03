@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import com.nakib.iamhere.networking.ApiClient.addNewTimeModule
 import com.nakib.iamhere.networking.ApiClient.adminModule
+import com.nakib.iamhere.networking.ApiClient.doctorLocationModule
 import com.nakib.iamhere.networking.ApiClient.loginModule
 import com.nakib.iamhere.networking.ApiClient.mainActivityModule
 import com.nakib.iamhere.networking.ApiClient.networkModule
@@ -37,7 +38,8 @@ class BaseApplication : Application() {
                 addNewTimeModule,
                 normalHomeModule,
                 mainActivityModule,
-                adminModule
+                adminModule,
+                doctorLocationModule
             ))
         }
     }

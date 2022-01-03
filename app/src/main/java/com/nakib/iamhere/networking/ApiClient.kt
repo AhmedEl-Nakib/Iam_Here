@@ -3,6 +3,7 @@ package com.nakib.iamhere.networking
 import com.nakib.iamhere.MainActivityViewModel
 import com.nakib.iamhere.ui.addNewTime.AddNewTimeViewModel
 import com.nakib.iamhere.ui.admin.AdminViewModel
+import com.nakib.iamhere.ui.doctorLocation.DoctorLocationViewModel
 import com.nakib.iamhere.ui.homeNormal.HomeNormalViewModel
 import com.nakib.iamhere.ui.login.LoginViewModel
 import org.koin.dsl.module
@@ -31,6 +32,7 @@ object ApiClient {
     val normalHomeModule = module { viewModel { HomeNormalViewModel(get()) } }
     val mainActivityModule = module { viewModel { MainActivityViewModel(get()) } }
     val adminModule = module { viewModel { AdminViewModel(get()) } }
+    val doctorLocationModule = module { viewModel { DoctorLocationViewModel(get()) } }
 
 
 

@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.nakib.iamhere.R
 import com.nakib.iamhere.databinding.LoginFragmentBinding
 import org.koin.android.ext.android.inject
@@ -35,9 +36,19 @@ class LoginFragment : Fragment() {
         handleObserver()
         sharedPreferences = requireActivity().getSharedPreferences("iamhere", Context.MODE_PRIVATE)
         if(sharedPreferences.getString("UserId","")!!.isNotEmpty()){
-            val bundle = bundleOf("ViewType" to "Normal" , "DrName" to sharedPreferences.getString("DrName","") , "UserId" to sharedPreferences.getString("UserId",""))
-            Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeNormalFragment, bundle)
+            if(sharedPreferences.getString("UserId","")!! == "AdminId"){
+                Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_adminFragment)
+            }else {
+                val bundle = bundleOf(
+                    "ViewType" to "Normal",
+                    "DrName" to sharedPreferences.getString("DrName", ""),
+                    "UserId" to sharedPreferences.getString("UserId", "")
+                )
+                Navigation.findNavController(requireView())
+                    .navigate(R.id.action_loginFragment_to_homeNormalFragment, bundle)
+            }
         }
+
 
         binding.loginBtnId.setOnClickListener {
             if(CheckGpsStatus(requireContext()))
@@ -64,6 +75,9 @@ class LoginFragment : Fragment() {
                     Navigation.findNavController(requireView())
                         .navigate(R.id.action_loginFragment_to_homeNormalFragment, bundle)
                 }else{
+                    val editor: SharedPreferences.Editor = sharedPreferences.edit()
+                    editor.putString("UserId", "AdminId")
+                    editor.apply()
                     Navigation.findNavController(requireView())
                         .navigate(R.id.action_loginFragment_to_adminFragment)
                 }
