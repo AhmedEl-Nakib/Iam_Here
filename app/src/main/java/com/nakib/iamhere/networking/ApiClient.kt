@@ -2,6 +2,7 @@ package com.nakib.iamhere.networking
 
 import com.nakib.iamhere.MainActivityViewModel
 import com.nakib.iamhere.ui.addNewTime.AddNewTimeViewModel
+import com.nakib.iamhere.ui.addUser.AddUserViewModel
 import com.nakib.iamhere.ui.admin.AdminViewModel
 import com.nakib.iamhere.ui.doctorLocation.DoctorLocationViewModel
 import com.nakib.iamhere.ui.homeNormal.HomeNormalViewModel
@@ -13,7 +14,7 @@ import org.koin.android.viewmodel.dsl.viewModel
 
 object ApiClient {
 
-    private const val BASE_URL_HOME = "http://masry.live/app/json/"
+    private const val BASE_URL_HOME = "https://hodhodpediascope.com/app/json/"
 
 
     val networkModule = module {
@@ -33,6 +34,7 @@ object ApiClient {
     val mainActivityModule = module { viewModel { MainActivityViewModel(get()) } }
     val adminModule = module { viewModel { AdminViewModel(get()) } }
     val doctorLocationModule = module { viewModel { DoctorLocationViewModel(get()) } }
+    val addUserModule = module { viewModel { AddUserViewModel(get()) } }
 
 
 

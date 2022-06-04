@@ -122,5 +122,17 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_adminFragment_to_addUserFragment"
+            app:destination="@id/addUserFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.nakib.iamhere.ui.addUser.AddUserFragment"
+        android:label="add_user_fragment"
+        tools:layout="@layout/add_user_fragment" />
 </navigation>

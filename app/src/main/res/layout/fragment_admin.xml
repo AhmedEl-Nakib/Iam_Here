@@ -74,5 +74,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/settingId"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/calendarBtnId"
+            app:layout_constraintStart_toEndOf="@+id/calendarBtnId"
+            app:layout_constraintTop_toTopOf="@+id/calendarBtnId"
+            app:srcCompat="@drawable/ic_baseline_person_add_24" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

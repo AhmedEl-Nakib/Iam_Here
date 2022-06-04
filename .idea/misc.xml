@@ -9,11 +9,13 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/drawable/ic_location_icon.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/drawable/ic_marker_icon.xml" value="0.23854166666666668" />
+        <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/drawable/ic_university_icon.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/drawable/sample_icon.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.225" />
         <entry key="app/src/main/res/layout/add_new_time_fragment.xml" value="0.24" />
+        <entry key="app/src/main/res/layout/add_user_fragment.xml" value="0.225" />
         <entry key="app/src/main/res/layout/admin_doctors_item.xml" value="0.27999999999999997" />
         <entry key="app/src/main/res/layout/doctor_location_fragment.xml" value="0.225" />
         <entry key="app/src/main/res/layout/fragment_admin.xml" value="0.22666666666666668" />

@@ -2,6 +2,7 @@ package com.nakib.iamhere.networking
 
 import com.nakib.iamhere.model.addAtendanceLocation.AddAtendanceLocationResponseModel
 import com.nakib.iamhere.model.addReservation.AddReservationResponseModel
+import com.nakib.iamhere.model.addUser.AddUserResponseModel
 import com.nakib.iamhere.model.admin.AdminDoctorResponseModel
 import com.nakib.iamhere.model.doctorLocation.DoctorLocationResponseModel
 import com.nakib.iamhere.model.home.DeleteRecordResponseModel
@@ -62,4 +63,25 @@ interface AppRequests {
     @FormUrlEncoded
     @POST("Attendance.php?action=GetOneUserDayAttendance")
     suspend fun getDoctorLocations(@Field("userId") userId:String ,@Field("day_date") day_date:String) : Response<List<DoctorLocationResponseModel>>
+
+    @FormUrlEncoded
+    @POST("Users.php?action=insert")
+    suspend fun addNewUser(@Field("DrName")DrName:String,
+                           @Field("Title")Title:String,
+                           @Field("Depatrment")Depatrment:String,
+                           @Field("Phone")Phone:String,
+                           @Field("Username")Username:String,
+                           @Field("Password")Password:String,
+                           @Field("IsAdmin")IsAdmin:String) : Response<AddUserResponseModel>
+
+    @FormUrlEncoded
+    @POST("Users.php?action=update")
+    suspend fun updateUser(@Field("userId")userId:String,
+                           @Field("DrName")DrName:String,
+                           @Field("Title")Title:String,
+                           @Field("Depatrment")Depatrment:String,
+                           @Field("Phone")Phone:String,
+                           @Field("Username")Username:String,
+                           @Field("Password")Password:String,
+                           @Field("IsAdmin")IsAdmin:String) : Response<AddUserResponseModel>
 }

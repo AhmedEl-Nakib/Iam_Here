@@ -14,7 +14,7 @@ class HomeAdminAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(AdminDoctorsItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return ViewHolder(AdminDoctorsItemBinding.inflate(LayoutInflater.from(parent.context), parent, false),onDoctorClicked)
     }
 
     fun submitList(newList: ArrayList<AdminDoctorResponseModel>){
@@ -34,17 +34,20 @@ class HomeAdminAdapter(
     }
 
 
-    class ViewHolder(private var binding: AdminDoctorsItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(private var binding: AdminDoctorsItemBinding,var onDoctorClicked: OnDoctorClicked) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: AdminDoctorResponseModel) {
             binding.model = item
             binding.executePendingBindings()
-
+            binding.editId.setOnClickListener {
+                onDoctorClicked.onDoctorEditClicked(item)
+            }
         }
 
     }
 
     interface OnDoctorClicked{
         fun onDoctorClicked(item : AdminDoctorResponseModel)
+        fun onDoctorEditClicked(item : AdminDoctorResponseModel)
 
     }
 }

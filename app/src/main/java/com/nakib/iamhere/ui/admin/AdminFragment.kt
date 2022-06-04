@@ -1,6 +1,8 @@
 package com.nakib.iamhere.ui.admin
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -57,6 +59,11 @@ class AdminFragment : Fragment(), HomeAdminAdapter.OnDoctorClicked {
             dpd.show()
 //            Navigation.findNavController(it).navigate(R.id.action_homeNormalFragment_to_timeTableNormalFragment)
         }
+
+        binding.settingId.setOnClickListener {
+            val bundle = bundleOf("ViewType" to "AddUser" , "UserId" to "")
+            Navigation.findNavController(it).navigate(R.id.action_adminFragment_to_addUserFragment,bundle)
+        }
     }
 
     private fun init() {
@@ -101,6 +108,11 @@ class AdminFragment : Fragment(), HomeAdminAdapter.OnDoctorClicked {
 //            .navigate(R.id.action_adminFragment_to_doctorLocationFragment, bundle)
 //
         requireActivity().startActivity(Intent(requireContext(),DoctorLocationFragment::class.java).putExtra("UserId",item.userId).putExtra("Date",dateSelected))
+    }
+
+    override fun onDoctorEditClicked(item: AdminDoctorResponseModel) {
+        val bundle = bundleOf("ViewType" to "UpdateUser", "UserId" to item.userId)
+        Navigation.findNavController(requireView()).navigate(R.id.action_adminFragment_to_addUserFragment,bundle)
     }
 
     private fun filter(searchWord: String) {
