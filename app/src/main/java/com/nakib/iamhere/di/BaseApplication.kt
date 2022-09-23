@@ -10,6 +10,7 @@ import com.nakib.iamhere.networking.ApiClient.loginModule
 import com.nakib.iamhere.networking.ApiClient.mainActivityModule
 import com.nakib.iamhere.networking.ApiClient.networkModule
 import com.nakib.iamhere.networking.ApiClient.normalHomeModule
+import com.nakib.iamhere.networking.ApiClient.updatePasswordModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -41,7 +42,8 @@ class BaseApplication : Application() {
                 mainActivityModule,
                 adminModule,
                 doctorLocationModule,
-                addUserModule
+                addUserModule,
+                updatePasswordModule
             ))
         }
     }

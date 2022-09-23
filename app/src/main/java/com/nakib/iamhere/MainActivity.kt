@@ -1,6 +1,7 @@
 package com.nakib.iamhere
 
 import android.Manifest
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -221,6 +222,7 @@ class MainActivity : AppCompatActivity() {
         fun setContext(context: Context) {
             mCtx = context
         }
+        @SuppressLint("UnspecifiedImmutableFlag")
         fun startServiceCompanion(){
             GPSService.LocationInterval = 300000
 //        GPSService.LocationFastestInterval = 300000

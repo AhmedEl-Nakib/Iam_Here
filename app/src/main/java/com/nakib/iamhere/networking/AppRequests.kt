@@ -21,8 +21,8 @@ interface AppRequests {
 //    suspend fun getLearningLeaders(): Response<LearningLeadersResponse>
 //
     @FormUrlEncoded
-    @POST("Users.php?action=logIn")
-    suspend fun getUserLogin(@Field("Username") Username:String ,
+    @POST("Users.php?action=logIn2")
+    suspend fun getUserLogin(@Field("userId") Username:String ,
                                    @Field("Password") Password:String ): Response<LoginResponseModel>
 
     @GET("Places.php?action=getAll")
@@ -84,4 +84,11 @@ interface AppRequests {
                            @Field("Username")Username:String,
                            @Field("Password")Password:String,
                            @Field("IsAdmin")IsAdmin:String) : Response<AddUserResponseModel>
+
+    @FormUrlEncoded
+    @POST("Users.php?action=UpdatePassword")
+    suspend fun updatePassword(@Field("userId")userId:String,
+                           @Field("Username")Username:String,
+                           @Field("OldPassword")OldPassword:String,
+                           @Field("NewPassword")NewPassword:String) : Response<AddUserResponseModel>
 }

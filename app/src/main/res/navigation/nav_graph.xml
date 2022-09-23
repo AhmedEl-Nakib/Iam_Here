@@ -87,9 +87,9 @@
         tools:layout="@layout/add_new_time_fragment" />
     <fragment
         android:id="@+id/timeTableNormalFragment"
-        android:name="com.nakib.iamhere.ui.timeTableNormal.TimeTableNormalFragment"
+        android:name="com.nakib.iamhere.ui.updatePassword.UpdatePasswordFragment"
         android:label="time_table_normal_fragment"
-        tools:layout="@layout/time_table_normal_fragment" />
+        tools:layout="@layout/update_password_fragment" />
     <fragment
         android:id="@+id/doctorLocationFragment"
         android:name="com.nakib.iamhere.ui.doctorLocation.DoctorLocationFragment"
